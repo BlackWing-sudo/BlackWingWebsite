@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackWing Studio 🖤🦅</title>
+
 <style>
     body {
         background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -15,7 +16,6 @@
         overflow-x: hidden;
     }
 
-    /* العنوان مع Gradient Background مستقل */
     h1 {
         font-size: 44px;
         letter-spacing: 3px;
@@ -24,7 +24,7 @@
         position: relative;
         display: inline-block;
         overflow: hidden;
-        color: #fff; /* fallback color */
+        color: #fff;
         opacity: 0;
         transform: translateY(-50px);
         animation: slideFadeIn 1s forwards 0.3s;
@@ -42,7 +42,6 @@
         animation: gradientShift 5s linear infinite;
     }
 
-    /* النبذة */
     #about {
         font-size: 20px;
         margin-bottom: 40px;
@@ -51,7 +50,7 @@
         position: relative;
         display: inline-block;
         overflow: hidden;
-        color: #fff; /* fallback */
+        color: #fff;
         opacity: 0;
         transform: translateY(-30px);
         animation: slideFadeIn 1s forwards 0.8s;
@@ -69,7 +68,6 @@
         animation: gradientShift 6s linear infinite;
     }
 
-    /* روابط المواقع */
     #social a {
         text-decoration: none;
         font-size: 18px;
@@ -87,44 +85,104 @@
     #social a.instagram { background-color: #C13584; color: #fff; animation-delay: 1.4s; }
     #social a.telegram { background-color: #0088CC; color: #fff; animation-delay: 1.6s; }
 
-    #social a:hover { transform: scale(1.15); opacity: 0.9; box-shadow: 0 0 15px rgba(255,255,255,0.4); }
+    #social a:hover {
+        transform: scale(1.15);
+        opacity: 0.9;
+        box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
 
-    /* المشاريع */
-    #projects { margin-top:50px; font-size:22px; font-weight:bold; color:#FFA500; opacity:0; transform:translateY(30px); animation: slideFadeIn 1s forwards 2s; }
-    #projects span { display:block; margin:12px 0; }
+    /* 🔥 قسم الألعاب */
+    #games {
+        margin-top: 60px;
+        opacity: 0;
+        animation: slideFadeIn 1s forwards 2s;
+    }
 
-    /* تفاصيل إضافية */
-    #details { margin-top:30px; font-size:18px; line-height:1.6; color:#ffffffcc; opacity:0; transform:translateY(30px); animation: slideFadeIn 1s forwards 2.5s; }
-    #details span { color:#7CFC00; font-weight:bold; }
+    #games h2 {
+        color: #FFA500;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
 
-    /* Animations */
-    @keyframes slideFadeIn { to { opacity:1; transform:translateY(0); } }
-    @keyframes fadeIn { to { opacity:1; } }
-    @keyframes gradientShift { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+    /* iframe */
+    .game-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #projects, #details {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ffffffcc;
+    }
+
+    #projects span {
+        display: block;
+        margin: 12px 0;
+    }
+
+    #details span {
+        color: #7CFC00;
+        font-weight: bold;
+    }
+
+    @keyframes slideFadeIn {
+        to { opacity:1; transform:translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        to { opacity:1; }
+    }
+
+    @keyframes gradientShift {
+        0% { background-position:0% 50%; }
+        50% { background-position:100% 50%; }
+        100% { background-position:0% 50%; }
+    }
+
 </style>
 </head>
+
 <body>
 
-    <h1>BlackWing Studio 🖤🦅</h1>
+<h1>BlackWing Studio 🖤🦅</h1>
 
-    <p id="about">Passionate developer mastering every detail, from scratch to full professional level!</p>
+<p id="about">
+Passionate developer mastering every detail, from scratch to full professional level!
+</p>
 
-    <div id="social">
-        <a href="https://www.youtube.com/@VortexHamed" class="youtube" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/blackwing_.studio?igsh=aTFtdW9teTB0cDQx" class="instagram" target="_blank">Instagram</a>
-        <a href="https://t.me/BlackWingDevLog" class="telegram" target="_blank">Telegram</a>
+<div id="social">
+    <a href="https://www.youtube.com/@VortexHamed" class="youtube" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/blackwing_.studio?igsh=aTFtdW9teTB0cDQx" class="instagram" target="_blank">Instagram</a>
+    <a href="https://t.me/BlackWingDevLog" class="telegram" target="_blank">Telegram</a>
+</div>
+
+<!-- 🎮 الألعاب -->
+<div id="games">
+    <h2>🎮 My Game</h2>
+
+    <div class="game-box">
+
+        <iframe frameborder="0"
+        src="https://itch.io/embed/4504672?dark=true"
+        width="552" height="167">
+        <a href="https://blackwing-sudo.itch.io/intelligence">اختبر ذكائك by BlackWing-sudo</a>
+        </iframe>
+
     </div>
+</div>
 
-    <div id="projects">
-        <span>Latest Game: Eagle Drop – Coming Soon</span>
-        <span>Previous Projects: FinalPath 2D, Minimal Trap Worlds</span>
-    </div>
+<div id="projects">
+    <span>Latest Game: Intelligence Test</span>
+</div>
 
-    <div id="details">
-        <p><span>Focus:</span> Learning game development from scratch and improving coding skills every day.</p>
-        <p><span>Goal:</span> Create fun and challenging experiences for players worldwide.</p>
-        <p><span>Passion:</span> Design minimal but impactful worlds that leave a mark.</p>
-    </div>
+<div id="details">
+    <p><span>Focus:</span> Learning game development from scratch and improving coding skills every day.</p>
+    <p><span>Goal:</span> Create fun and challenging experiences for players worldwide.</p>
+    <p><span>Passion:</span> Design minimal but impactful worlds that leave a mark.</p>
+</div>
 
 </body>
 </html>
